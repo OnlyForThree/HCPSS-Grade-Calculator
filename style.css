@@ -1,0 +1,50 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-image: linear-gradient(#008DDA, #FBF9F1);
+  }
+  
+  #title {
+    text-align: center;
+    color: #92C7CF;
+    background-color: #E5E1DA;
+  }
+  
+  #playButton {
+    width: 500px;
+    height: 100px;
+    background: #FBF9F1;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  #bar {
+    width: 500px; 
+    position: absolute;
+    bottom: 50px; 
+    left: 50%; 
+    transform: translateX(-50%);  
+  }
+  
+  #gamesImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+  }
+  
+  @keyframes example {
+    from {
+      top: -500px;
+    }
+  
+    to {
+      top: 600px;
+      background-color: #008DDA;
+    }
+  }
