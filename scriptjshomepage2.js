@@ -10,15 +10,13 @@ function w3_close() {
     document.getElementById("openNav").style.display = "inline-block";
 }
 
-class Grade {
-  constructor(grade) {
-    gradeLetter = "";
-  }
 
-  setGradeNumber(letter) {
-    gradeLetter = letter;
-  }
+function setGradeNumberQ1(letter) {
+  gradeLetter = letter;
+  document.getElementById("letter1").innerHTML = letter;
+}
 
-
-
+function setGradeNumberQ2(letter) {
+  gradeLetter = letter;
+  document.getElementById("letter2").innerHTML = letter;
 }

@@ -11,6 +11,8 @@ html {
     text-align: center;
     color: #92C7CF;
     background-color: #E5E1DA;
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+
   }
   
   #playButton {
@@ -44,7 +46,7 @@ html {
     }
   
     to {
-      top: 600px;
+      top: 500px;
       background-color: #008DDA;
     }
   }

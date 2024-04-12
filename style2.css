@@ -1,3 +1,7 @@
-heading { 
+#title { 
+	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+
+#main {
 	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 }

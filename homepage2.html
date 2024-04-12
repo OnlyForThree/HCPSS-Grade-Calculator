@@ -18,24 +18,37 @@
 <div class="w3-pale-blue">
   <button id="openNav" class="w3-button w3-pale-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
   <div class="w3-container">
-    <h1 class="w3-monospace">GPA Calculator</h1>
+    <h1 id="title">GPA Calculator/Grade Calculator</h1>
   </div>
 </div>
 
 <div class="w3-container">
-  <h4 class="w3-pale-blue w3-xlarge w3-monospace">Full Year Courses</h4>
+  <h4 class="w3-pale-blue" id="title">Full Year Courses</h4>
   <text>Each quarter grade is worth 20%. The midterm and final exams are worth 10% each.</text>
   
   <br><div class="w3-dropdown-hover">
     <button class="w3-button">Quarter 1</button>
     <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button" onclick="setGradeNumber(A)">A</a>
-      <a href="#" class="w3-bar-item w3-button">B</a>
-      <a href="#" class="w3-bar-item w3-button">C</a>
-      <a href="#" class="w3-bar-item w3-button">D</a>
-      <a href="#" class="w3-bar-item w3-button">E</a>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('A')">A</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('B')">B</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('C')">C</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('D')">D</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('E')">E</button>
     </div>
   </div></br>
+  <p id="letter1"></p>
+
+  <div class="w3-dropdown-hover">
+    <button class="w3-button">Quarter 2</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('A')">A</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('B')">B</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('C')">C</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('D')">D</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('E')">E</button>
+    </div>
+  </div>
+  <p id="letter2"></p>
 
 
 </div>
