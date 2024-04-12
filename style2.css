@@ -5,3 +5,17 @@
 #main {
 	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 }
+
+.quarter {
+	float: left;
+	width: 50%;
+  }
+  
+  /* Clear floats after the quarters */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+  
