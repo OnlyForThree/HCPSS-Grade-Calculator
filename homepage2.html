@@ -24,16 +24,18 @@
 
 <div class="w3-container">
   <div class="w3-bar w3-pale-blue">
-    <button class="w3-bar-item w3-button" onclick="openFile('FullYearCourses')">FullYearCourses</button>
-    <button class="w3-bar-item w3-button" onclick="openFile('StateAssessedCourses')">StateAssessedCourses</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('SemesterCourses')">SemesterCourses</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('GradePointAverage')">GradePointAverage</button>
+    <button class="w3-bar-item w3-button" onclick="openFile('FullYearCourses')">Full Year Courses</button>
+    <button class="w3-bar-item w3-button" onclick="openFile('StateAssessments')">State Assessments</button>
+    <button class="w3-bar-item w3-button" onclick="openFile('SemesterClasses')">Semester Courses</button>
   </div>
-
-  <div id="FullYearCourses" class="file">
-  <text>Each quarter grade is worth 20%. The midterm and final exams are worth 10% each.</text>
   
-  <br><div class="w3-dropdown-hover">
+  <div id="FullYearCourses" class="w3-container w3-display-container file">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-display-topright">&times;</span>
+    
+    <text>Each quarter grade is worth 20%. The midterm and final exams are worth 10% each.</text>
+  
+    <br><div class="w3-dropdown-hover">
     <button class="w3-button">Quarter 1</button>
 
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('A')">A</button>
@@ -105,28 +107,23 @@
   </div>
   <p id="finals"></p>
   
-  
   <p>Final Grade: </p>
   <p id="finalGrade"></p>
-
-
-</div>
   </div>
   
-  <div id="StateAssessedCourses" class="file" style="display:none">
+  <div id="StateAssessments" class="w3-container w3-display-container file" style="display:none">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-display-topright">&times;</span>
     <h2>Paris</h2>
-    <p>Paris is the capital of France.</p>
+    <p>Paris is the capital of France.</p> 
   </div>
   
-  <div id="SemesterCourses" class="file" style="display:none">
+  <div id="SemesterClasses" class="w3-container w3-display-container file" style="display:none">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-display-topright">&times;</span>
     <h2>Tokyo</h2>
     <p>Tokyo is the capital of Japan.</p>
   </div>
-  <div id="GradePointAverage" class="file" style="display:none">
-    <h2>Tokyo</h2>
-    <p>Tokyo is the capital of Japan.</p>
-  </div>
-
   
   
 

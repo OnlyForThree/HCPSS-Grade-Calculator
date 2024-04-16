@@ -12,13 +12,13 @@ function w3_close() {
   document.getElementById("openNav").style.display = "inline-block";
 }
 
-function openCity(file) {
+function openFile(fileName) {
   var i;
   var x = document.getElementsByClassName("file");
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+    x[i].style.display = "none";  
   }
-  document.getElementById(file).style.display = "block";
+  document.getElementById(fileName).style.display = "block";  
 }
 
 // Global variables for grades
