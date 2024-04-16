@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>HCPSS.SCHEDULING</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="style2.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -23,61 +23,112 @@
 </div>
 
 <div class="w3-container">
-  <h4 class="w3-pale-blue" id="title">Full Year Courses</h4>
+  <div class="w3-bar w3-pale-blue">
+    <button class="w3-bar-item w3-button" onclick="openFile('FullYearCourses')">FullYearCourses</button>
+    <button class="w3-bar-item w3-button" onclick="openFile('StateAssessedCourses')">StateAssessedCourses</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('SemesterCourses')">SemesterCourses</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('GradePointAverage')">GradePointAverage</button>
+  </div>
+
+  <div id="FullYearCourses" class="file">
   <text>Each quarter grade is worth 20%. The midterm and final exams are worth 10% each.</text>
   
   <br><div class="w3-dropdown-hover">
     <button class="w3-button">Quarter 1</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
+
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('A')">A</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('B')">B</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('C')">C</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('D')">D</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ1('E')">E</button>
-    </div>
+
   </div></br>
   <p id="letter1"></p>
 
   <div class="w3-dropdown-hover">
     <button class="w3-button">Quarter 2</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
+
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('A')">A</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('B')">B</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('C')">C</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('D')">D</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ2('E')">E</button>
-    </div>
+
   </div>
   <p id="letter2"></p>
 
   <div class="w3-dropdown-hover">
+    <button class="w3-button">Midterm</button>
+
+      <button class="w3-bar-item w3-button" onclick="setGradeMidterm('A')">A</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeMidterm('B')">B</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeMidterm('C')">C</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeMidterm('D')">D</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeMidterm('E')">E</button>
+
+  </div>
+  <p id="midterm"></p>
+
+  <div class="w3-dropdown-hover">
     <button class="w3-button">Quarter 3</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
+   
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ3('A')">A</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ3('B')">B</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ3('C')">C</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ3('D')">D</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ3('E')">E</button>
-    </div>
+
   </div>
   <p id="letter3"></p>
 
   <div class="w3-dropdown-hover">
     <button class="w3-button">Quarter 4</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
+    
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ4('A')">A</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ4('B')">B</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ4('C')">C</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ4('D')">D</button>
       <button class="w3-bar-item w3-button" onclick="setGradeNumberQ4('E')">E</button>
-    </div>
+
   </div>
   <p id="letter4"></p>
+
+  <div class="w3-dropdown-hover">
+    <button class="w3-button">Finals</button>
+
+      <button class="w3-bar-item w3-button" onclick="setGradeFinals('A')">A</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeFinals('B')">B</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeFinals('C')">C</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeFinals('D')">D</button>
+      <button class="w3-bar-item w3-button" onclick="setGradeFinals('E')">E</button>
+
+  </div>
+  <p id="finals"></p>
+  
+  
   <p>Final Grade: </p>
   <p id="finalGrade"></p>
 
 
 </div>
+  </div>
+  
+  <div id="StateAssessedCourses" class="file" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+  </div>
+  
+  <div id="SemesterCourses" class="file" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+  <div id="GradePointAverage" class="file" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+  
+  
 
 </div>
 
