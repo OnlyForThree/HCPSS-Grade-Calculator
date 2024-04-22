@@ -81,11 +81,15 @@ class GradeCalculator {
     };
 
     // Calculate weighted scores
-    const quarterGrades = [gradeLetterQ1, gradeLetterQ2, gradeLetterQ3, gradeLetterQ4].map(convertLetterToNumber).reduce((acc, grade) => acc + (grade * 0.2), 0);
+    //const quarterGrades = [gradeLetterQ1, gradeLetterQ2, gradeLetterQ3, gradeLetterQ4].map(convertLetterToNumber).reduce((acc, grade) => acc + (grade * 0.2), 0);
+    const quarterGrade1 = convertLetterToNumber(gradeLetterQ1) * .2;
+    const quarterGrade2 = convertLetterToNumber(gradeLetterQ2) * .2;
+    const quarterGrade3 = convertLetterToNumber(gradeLetterQ3) * .2;
+    const quarterGrade4 = convertLetterToNumber(gradeLetterQ4) * .2;
     const midtermGrade = convertLetterToNumber(midterms) * 0.1;
     const finalGrade = convertLetterToNumber(finals) * 0.1;
 
-    return quarterGrades + midtermGrade + finalGrade;
+    return quarterGrade1 + midtermGrade + finalGrade + quarterGrade2 + quarterGrade3 + quarterGrade4;
   }
 
   calculateTotal() {
