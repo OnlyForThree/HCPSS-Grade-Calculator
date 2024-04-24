@@ -1,3 +1,6 @@
+const db = new sqlite.Database('./db.sqlite');
+const sqlite3 = require('sqlite3').verbose();
+
 // Sidebar functions for opening and closing
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";
