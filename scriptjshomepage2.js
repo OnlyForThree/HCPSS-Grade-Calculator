@@ -77,7 +77,8 @@ class GradeCalculator {
       return letter.toUpperCase() === 'A' ? 4 :
              letter.toUpperCase() === 'B' ? 3 :
              letter.toUpperCase() === 'C' ? 2 :
-             letter.toUpperCase() === 'D' ? 1 : 0;
+             letter.toUpperCase() === 'D' ? 1 : 
+             letter.toUpperCase() === 'E' ? 0 ;
     };
 
     // Calculate weighted scores
