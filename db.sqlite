@@ -1,0 +1,56 @@
+CREATE TABLE course_descriptions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    description_name VARCHAR(50) NOT NULL,
+    ARL_status BOOLEAN
+);
+
+CREATE TABLE course_weights (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    weight_name VARCHAR(50) NOT NULL,
+    weighting REAL,
+    credits REAL
+);
+
+CREATE TABLE courses (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    description_id INT,
+    course_name VARCHAR(255) NOT NULL,
+    weight_id INT,
+    course_number VARCHAR(255) NOT NULL,
+    FOREIGN KEY (description_id) REFERENCES course_descriptions(id)
+    FOREIGN KEY (weight_id) REFERENCES course_weights(id)
+);
+
+INSERT INTO course_descriptions (description_name, ARL_status) VALUES
+    ('Advanced Research', 1),
+    ('Aerospace Engineering', 1),
+    ('Agricultural Science', 1),
+    ('Animation and Interactive Media', 1),
+    ('Computer Programming', 0),
+    ('Computer Science', 0);
+
+INSERT INTO course_weights (weight_name, weighting, credits) VALUES
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ('AP', 5.0, 1.0),
+    ('G/T', 5.0, 1.0),
+    ('G/T', 5.0, 2.0),
+    ('G/T', 5.0, 3.0),
+    ('H', 4.5, 1.0),
+    ('R', 4.0, 0.5),
+    ('R', 4.0, 1.0)
+    ('R', 4.0, 2.0)
+    ('R', 4.0, 3.0);
+
+INSERT INTO courses (description_id, course_name, course_weight, course_code) VALUES
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    (1, 'Independent Research I', 2, 'GT-400-1'),
+    (1, 'Independent Research II', 2, 'GT-400-1'),
+    (2, 'Aerospace I', 3, 'CT-605-2'),
+    (2, 'Aerospace II', 4, 'CT-605-2'),
+    (3, 'Agricultural Science I', 3, 'CT-750-2'),
+    (4, 'Animation & Interactive Media I', 8, 'CT-796-2'),
+    (4, 'Animation & Interactive Media II', 9, 'CT-798-3'),
+    (5, 'Programming Fundamentals', 2, 'CT-463-1'),
+    (5, 'Computer Science A', 1, 'CT-475-1'),
+    (5, 'Computer Science A', 1, 'CT-475-1'),
+    (6, 'Advanced Object-Oriented Design', 2, 'CT-495-1');
