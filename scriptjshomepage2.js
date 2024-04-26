@@ -1,10 +1,12 @@
+/*
 const db = new sqlite.Database('./db.sqlite');
 const sqlite3 = require('sqlite3').verbose();
 
-// Open a connection to the database
+Open a connection to the database
 const db = new sqlite3.Database('./db.sqlite');
-
+*/
 // Sidebar functions for opening and closing
+
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";
   document.getElementById("mySidebar").style.width = "25%";
@@ -121,7 +123,8 @@ function updateGradeQuarter() {
   gradeCalculator.calculateGrade();
 }
 
-// Function to query course descriptions
+/*
+Function to query course descriptions
 function getCourseDescriptions() {
     return new Promise((resolve, reject) => {
         db.all('SELECT * FROM course_descriptions', (err, rows) => {
@@ -195,3 +198,4 @@ function onEvent(eventType, eventData) {
             });
     }
 }
+*/
