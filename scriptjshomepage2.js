@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 // const db = new sqlite.Database('./db.sqlite');
 // const sqlite3 = require('sqlite3').verbose();
 
 // // Open a connection to the database
 // const db = new sqlite3.Database('./db.sqlite');
 
-=======
-/*
-const db = new sqlite.Database('./db.sqlite');
-const sqlite3 = require('sqlite3').verbose();
-
-Open a connection to the database
-const db = new sqlite3.Database('./db.sqlite');
-*/
->>>>>>> 4e125ebed7af626213a2d0255e8a82ce341be861
 // Sidebar functions for opening and closing
-
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";
   document.getElementById("mySidebar").style.width = "25%";
@@ -130,7 +119,6 @@ function updateGradeQuarter() {
   gradeCalculator.calculateGrade();
 }
 
-<<<<<<< HEAD
 // // Function to query course descriptions
 // function getCourseDescriptions() {
 //     return new Promise((resolve, reject) => {
@@ -143,21 +131,6 @@ function updateGradeQuarter() {
 //         });
 //     });
 // }
-=======
-/*
-Function to query course descriptions
-function getCourseDescriptions() {
-    return new Promise((resolve, reject) => {
-        db.all('SELECT * FROM course_descriptions', (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(rows);
-            }
-        });
-    });
-}
->>>>>>> 4e125ebed7af626213a2d0255e8a82ce341be861
 
 // // Function to query course weights
 // function getCourseWeights() {
@@ -192,7 +165,6 @@ function getCourseDescriptions() {
 //     });
 // }
 
-<<<<<<< HEAD
 // // Sample event handler
 // function onEvent(eventType, eventData) {
 //     if (eventType === 'getCourseDescriptions') {
@@ -221,34 +193,3 @@ function getCourseDescriptions() {
 //             });
 //     }
 // }
-=======
-// Sample event handler
-function onEvent(eventType, eventData) {
-    if (eventType === 'getCourseDescriptions') {
-        getCourseDescriptions()
-            .then(descriptions => {
-                console.log('Course Descriptions:', descriptions);
-            })
-            .catch(err => {
-                console.error('Error getting course descriptions:', err);
-            });
-    } else if (eventType === 'getCourseWeights') {
-        getCourseWeights()
-            .then(weights => {
-                console.log('Course Weights:', weights);
-            })
-            .catch(err => {
-                console.error('Error getting course weights:', err);
-            });
-    } else if (eventType === 'getCoursesByDescription') {
-        getCoursesByDescription(eventData.descriptionName)
-            .then(courses => {
-                console.log('Courses for Description:', courses);
-            })
-            .catch(err => {
-                console.error('Error getting courses by description:', err);
-            });
-    }
-}
-*/
->>>>>>> 4e125ebed7af626213a2d0255e8a82ce341be861
