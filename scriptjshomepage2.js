@@ -4,81 +4,6 @@ const sqlite3 = require('sqlite3').verbose();
 // Open a connection to the database
 const db = new sqlite3.Database('./db.sqlite');
 
-// Function to query course descriptions
-function getCourseDescriptions() {
-    return new Promise((resolve, reject) => {
-        db.all('SELECT * FROM course_descriptions', (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(rows);
-            }
-        });
-    });
-}
-
-// Function to query course weights
-function getCourseWeights() {
-    return new Promise((resolve, reject) => {
-        db.all('SELECT * FROM course_weights', (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(rows);
-            }
-        });
-    });
-}
-
-// Function to query courses by description name
-function getCoursesByDescription(descriptionName) {
-    return new Promise((resolve, reject) => {
-        const query = `
-            SELECT courses.id, courses.course_name, course_weights.weight_name, course_weights.weighting, course_weights.credits
-            FROM courses
-            INNER JOIN course_descriptions ON courses.description_id = course_descriptions.id
-            INNER JOIN course_weights ON courses.weight_id = course_weights.id
-            WHERE course_descriptions.description_name = ?;
-        `;
-        db.all(query, [descriptionName], (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(rows);
-            }
-        });
-    });
-}
-
-// Sample event handler
-function onEvent(eventType, eventData) {
-    if (eventType === 'getCourseDescriptions') {
-        getCourseDescriptions()
-            .then(descriptions => {
-                console.log('Course Descriptions:', descriptions);
-            })
-            .catch(err => {
-                console.error('Error getting course descriptions:', err);
-            });
-    } else if (eventType === 'getCourseWeights') {
-        getCourseWeights()
-            .then(weights => {
-                console.log('Course Weights:', weights);
-            })
-            .catch(err => {
-                console.error('Error getting course weights:', err);
-            });
-    } else if (eventType === 'getCoursesByDescription') {
-        getCoursesByDescription(eventData.descriptionName)
-            .then(courses => {
-                console.log('Courses for Description:', courses);
-            })
-            .catch(err => {
-                console.error('Error getting courses by description:', err);
-            });
-    }
-}
-
 // Sidebar functions for opening and closing
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";
@@ -194,4 +119,79 @@ const gradeCalculator = new GradeCalculator();
 
 function updateGradeQuarter() {
   gradeCalculator.calculateGrade();
+}
+
+// Function to query course descriptions
+function getCourseDescriptions() {
+    return new Promise((resolve, reject) => {
+        db.all('SELECT * FROM course_descriptions', (err, rows) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(rows);
+            }
+        });
+    });
+}
+
+// Function to query course weights
+function getCourseWeights() {
+    return new Promise((resolve, reject) => {
+        db.all('SELECT * FROM course_weights', (err, rows) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(rows);
+            }
+        });
+    });
+}
+
+// Function to query courses by description name
+function getCoursesByDescription(descriptionName) {
+    return new Promise((resolve, reject) => {
+        const query = `
+            SELECT courses.id, courses.course_name, course_weights.weight_name, course_weights.weighting, course_weights.credits
+            FROM courses
+            INNER JOIN course_descriptions ON courses.description_id = course_descriptions.id
+            INNER JOIN course_weights ON courses.weight_id = course_weights.id
+            WHERE course_descriptions.description_name = ?;
+        `;
+        db.all(query, [descriptionName], (err, rows) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(rows);
+            }
+        });
+    });
+}
+
+// Sample event handler
+function onEvent(eventType, eventData) {
+    if (eventType === 'getCourseDescriptions') {
+        getCourseDescriptions()
+            .then(descriptions => {
+                console.log('Course Descriptions:', descriptions);
+            })
+            .catch(err => {
+                console.error('Error getting course descriptions:', err);
+            });
+    } else if (eventType === 'getCourseWeights') {
+        getCourseWeights()
+            .then(weights => {
+                console.log('Course Weights:', weights);
+            })
+            .catch(err => {
+                console.error('Error getting course weights:', err);
+            });
+    } else if (eventType === 'getCoursesByDescription') {
+        getCoursesByDescription(eventData.descriptionName)
+            .then(courses => {
+                console.log('Courses for Description:', courses);
+            })
+            .catch(err => {
+                console.error('Error getting courses by description:', err);
+            });
+    }
 }
