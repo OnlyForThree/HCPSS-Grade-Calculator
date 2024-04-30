@@ -1,4 +1,4 @@
-// const db = new sqlite.Database('./db.sqlite');
+// install SQLite3 packages by entering "npm install sqlite3" into the console
 // const sqlite3 = require('sqlite3').verbose();
 
 // // Open a connection to the database
