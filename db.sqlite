@@ -37,8 +37,8 @@ INSERT INTO course_weights (weight_name, weighting, credits) VALUES
     ('G/T', 5.0, 3.0),
     ('H', 4.5, 1.0),
     ('R', 4.0, 0.5),
-    ('R', 4.0, 1.0)
-    ('R', 4.0, 2.0)
+    ('R', 4.0, 1.0),
+    ('R', 4.0, 2.0),
     ('R', 4.0, 3.0);
 
 INSERT INTO courses (description_id, course_name, course_weight, course_code) VALUES
