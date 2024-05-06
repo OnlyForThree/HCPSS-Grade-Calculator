@@ -25,7 +25,7 @@
 <div class="w3-container">
   <div class="w3-bar w3-pale-blue">
     <button class="w3-bar-item w3-button" onclick="openFile('FullYearCourses')">Full Year Courses</button>
-    <button class="w3-bar-item w3-button" onclick="openFile('StateAssessments')">State Assessments</button>
+    <button class="w3-bar-item w3-button" onclick="openFile('GPACalcuator')">GPA Calculator</button>
     <button class="w3-bar-item w3-button" onclick="openFile('SemesterClasses')">Semester Courses</button>
   </div>
   
@@ -111,11 +111,86 @@
   <p id="finalGrade"></p>
   </div>
   
-  <div id="StateAssessments" class="w3-container w3-display-container file" style="display:none">
+  <div id="GPACalcuator" class="w3-container w3-display-container file" style="display:none">
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
-    <h2>Paris</h2>
-    <p>Paris is the capital of France.</p> 
+
+    <br><div class="w3-dropdown-hover">
+      <button class="w3-button">Course #1</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse1('A')">A</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse1('B')">B</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse1('C')">C</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse1('D')">D</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse1('E')">E</button>
+    </div><br>
+    <p id="courseid1"></p>
+
+    <br><div class="w3-dropdown-hover">
+      <button class="w3-button">Course #2</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse2('A')">A</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse2('B')">B</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse2('C')">C</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse2('D')">D</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse2('E')">E</button>
+    </div><br>
+    <p id="courseid2"></p>
+
+    <br><div class="w3-dropdown-hover">
+      <button class="w3-button">Course #3</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse3('A')">A</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse3('B')">B</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse3('C')">C</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse3('D')">D</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse3('E')">E</button>
+    </div><br>
+    <p id="courseid3"></p>
+
+    <br><div class="w3-dropdown-hover">
+      <button class="w3-button">Course #4</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse4('A')">A</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse4('B')">B</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse4('C')">C</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse4('D')">D</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse4('E')">E</button>
+    </div><br>
+    <p id="courseid4"></p>
+
+    <br><div class="w3-dropdown-hover">
+      <button class="w3-button">Course #5</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse5('A')">A</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse5('B')">B</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse5('C')">C</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse5('D')">D</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse5('E')">E</button>
+    </div><br>
+    <p id="courseid5"></p>
+
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Course #6</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse6('A')">A</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse6('B')">B</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse6('C')">C</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse6('D')">D</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse6('E')">E</button>
+    </div>
+    <p id="courseid6"></p>
+
+    <br><div class="w3-dropdown-hover">
+      <button class="w3-button">Course #7</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse7('A')">A</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse7('B')">B</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse7('C')">C</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse7('D')">D</button>
+        <button class="w3-bar-item w3-button" onclick="setGradeCourse7('E')">E</button>
+    </div><br>
+    <p id="courseid7"></p>
+
+    <p id="unweightedGPA"></p>
+    <p id="weigthedGPA"></p>
+
+
+
+
   </div>
   
   <div id="SemesterClasses" class="w3-container w3-display-container file" style="display:none">

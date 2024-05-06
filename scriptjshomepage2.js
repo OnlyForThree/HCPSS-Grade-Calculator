@@ -118,6 +118,70 @@ const gradeCalculator = new GradeCalculator();
 function updateGradeQuarter() {
   gradeCalculator.calculateGrade();
 }
+courseid1="";
+courseid2="";
+courseid3="";
+courseid4="";
+courseid5="";
+courseid6="";
+courseid7="";
+
+function setGradeCourse1(letter) {
+  courseid1 = letter;
+  document.getElementById("courseid1").innerHTML = letter;
+}
+function setGradeCourse2(letter) {
+  courseid2 = letter;
+  document.getElementById("courseid2").innerHTML = letter;
+}
+function setGradeCourse3(letter) {
+  courseid3 = letter;
+  document.getElementById("courseid3").innerHTML = letter;
+}
+function setGradeCourse4(letter) {
+  courseid4 = letter;
+  document.getElementById("courseid4").innerHTML = letter;
+}
+function setGradeCourse5(letter) {
+  courseid5 = letter;
+  document.getElementById("courseid5").innerHTML = letter;
+}
+function setGradeCourse6(letter) {
+  courseid6 = letter;
+  document.getElementById("courseid6").innerHTML = letter;
+}
+function setGradeCourse7(letter) {
+  courseid7 = letter;
+  document.getElementById("courseid7").innerHTML = letter;
+}
+
+function addValuestoUnweighted(course, typeCourse) {
+  let courseValues = [];
+  if (course.equals("A")) {
+    courseValues.push(4.0)
+  }  
+}
+
+class GPAcalculator {
+
+  calculateGPA(courseValues, typeValues) {
+      let rawSum = 0;
+      let weightedSum = 0;
+      for (let i = 0; i < this.count; i++) {
+          rawSum += parseInt(courseValues[i]);
+          if (parseInt(courseValues[i]) > 1) {
+              weightedSum += parseInt(courseValues[i]) + typeValues[i];
+          } else {
+              weightedSum += parseInt(courseValues[i]);
+          }
+      }
+      document.getElementById("ungpa").innerText = (rawSum / 7).toFixed(2);
+      document.getElementById("wgpa").innerText = (weightedSum / 7).toFixed(2);
+  }
+}
+
+const calculator = new GPAcalculator();
+
 
 // // Function to query course descriptions
 // function getCourseDescriptions() {
