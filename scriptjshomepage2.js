@@ -175,8 +175,8 @@ class GPAcalculator {
               weightedSum += parseInt(courseValues[i]);
           }
       }
-      document.getElementById("ungpa").innerText = (rawSum / 7).toFixed(2);
-      document.getElementById("wgpa").innerText = (weightedSum / 7).toFixed(2);
+      document.getElementById("unweightedgpa").innerText = (rawSum / 7).toFixed(2);
+      document.getElementById("weightedGPA").innerText = (weightedSum / 7).toFixed(2);
   }
 }
 
